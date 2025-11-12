@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rasnayaka Ayurveda Hospital - Healing Through Tradition & Modern Ayurveda</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#2C5F2D',secondary:'#97754C'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+}
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=Serene%20ayurvedic%20spa%20setting%20with%20natural%20wooden%20elements%2C%20soft%20green%20plants%2C%20and%20herbal%20treatments%20arranged%20on%20bamboo%20mats.%20A%20peaceful%20water%20feature%20with%20floating%20lotus%20flowers%20in%20the%20background.%20Soft%20natural%20lighting%20filters%20through%20bamboo%20blinds%2C%20creating%20a%20tranquil%20atmosphere%20perfect%20for%20healing%20and%20relaxation.&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.header {
+transition: background-color 0.3s ease;
+}
+.header.scrolled {
+background-color: rgba(255, 255, 255, 0.95);
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.floating {
+animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+.testimonial-container {
+overflow: hidden;
+position: relative;
+}
+.testimonial-track {
+display: flex;
+transition: transform 0.5s ease;
+}
+.testimonial-card {
+flex: 0 0 100%;
+}
+@media (min-width: 768px) {
+.testimonial-card {
+flex: 0 0 50%;
+}
+}
+@media (min-width: 1024px) {
+.testimonial-card {
+flex: 0 0 33.333%;
+}
+}
+input[type="checkbox"].toggle {
+height: 0;
+width: 0;
+visibility: hidden;
+position: absolute;
+}
+.toggle-label {
+cursor: pointer;
+width: 50px;
+height: 24px;
+background: #e5e7eb;
+display: block;
+border-radius: 100px;
+position: relative;
+}
+.toggle-label:after {
+content: '';
+position: absolute;
+top: 2px;
+left: 2px;
+width: 20px;
+height: 20px;
+background: #fff;
+border-radius: 90px;
+transition: 0.3s;
+}
+input:checked + .toggle-label {
+background: #2C5F2D;
+}
+input:checked + .toggle-label:after {
+left: calc(100% - 2px);
+transform: translateX(-100%);
+}
+.custom-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #2C5F2D;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+.custom-checkbox:checked {
+background-color: #2C5F2D;
+}
+.custom-checkbox:checked::after {
+content: '✓';
+position: absolute;
+color: white;
+font-size: 14px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header -->
+<header class="header fixed w-full z-50 py-4">
+<div class="container mx-auto px-4 flex items-center justify-between">
+<div class="flex items-center">
+<div class="text-primary font-['Pacifico'] text-2xl mr-8">Rasnayaka Ayurveda</div>
+<nav class="hidden md:flex space-x-6">
+<a href="#" class="text-gray-800 hover:text-primary font-medium transition">Home</a>
+<a href="#about" class="text-gray-800 hover:text-primary font-medium transition">About</a>
+<a href="#services" class="text-gray-800 hover:text-primary font-medium transition">Treatments</a>
+<a href="https://readdy.ai/home/005b0c93-319d-4528-88bf-e4f4393bb24c/1ad1bbc6-4013-49ee-8cde-c7558aab0115" data-readdy="true" class="text-gray-800 hover:text-primary font-medium transition">Medicine</a>
+<a href="#contact" class="text-gray-800 hover:text-primary font-medium transition">Contact</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<div class="hidden md:flex items-center space-x-2">
+<span class="text-sm">EN</span>
+<input type="checkbox" id="language-toggle" class="toggle">
+<label for="language-toggle" class="toggle-label"></label>
+<span class="text-sm">සිං</span>
+</div>
+<a href="tel:+94771234567" class="bg-primary text-white px-4 py-2 !rounded-button flex items-center whitespace-nowrap">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-phone-line"></i>
+</div>
+Call Now
+</a>
+<button class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-bg relative min-h-screen flex items-center">
+<div class="absolute inset-0 bg-black bg-opacity-40"></div>
+<div class="container mx-auto px-4 relative z-10 py-20">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Healing Through Tradition & Modern Ayurveda</h1>
+<p class="text-xl text-white mb-8">Experience the perfect balance of ancient wisdom and contemporary practices at Kurunegala's premier Ayurvedic hospital.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#appointment" class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap">Book Online</a>
+<a href="#services" class="bg-white text-primary px-6 py-3 !rounded-button font-medium whitespace-nowrap">Explore Treatments</a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+<div class="w-10 h-10 flex items-center justify-center text-white">
+<i class="ri-arrow-down-line ri-xl"></i>
+</div>
+</div>
+</section>
+<!-- Quick-Access Dashboard -->
+<section id="appointment" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">Quick Access Services</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Online Appointment -->
+<div class="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-2">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6 mx-auto">
+<i class="ri-calendar-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-center mb-4">Online Appointment</h3>
+<p class="text-gray-600 mb-6 text-center">Schedule your consultation with our experienced Ayurvedic physicians</p>
+<form class="space-y-4">
+<div>
+<input type="text" placeholder="Full Name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+</div>
+<div>
+<input type="tel" placeholder="Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+</div>
+<div>
+<input type="date" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+</div>
+<button type="submit" class="w-full bg-primary text-white py-2 !rounded-button whitespace-nowrap">Book Appointment</button>
+</form>
+</div>
+<!-- Buy Medicine -->
+<div class="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-2">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mb-6 mx-auto">
+<i class="ri-medicine-bottle-line ri-xl text-secondary"></i>
+</div>
+<h3 class="text-xl font-semibold text-center mb-4">Buy Medicine</h3>
+<p class="text-gray-600 mb-6 text-center">Order authentic Ayurvedic medicines prepared with care using traditional methods</p>
+<div class="space-y-4">
+<div class="flex items-center p-3 border border-gray-200 rounded">
+<input type="checkbox" class="custom-checkbox mr-3">
+<span>Herbal Oils</span>
+</div>
+<div class="flex items-center p-3 border border-gray-200 rounded">
+<input type="checkbox" class="custom-checkbox mr-3">
+<span>Medicinal Powders</span>
+</div>
+<div class="flex items-center p-3 border border-gray-200 rounded">
+<input type="checkbox" class="custom-checkbox mr-3">
+<span>Herbal Teas</span>
+</div>
+<a href="#" class="block w-full bg-secondary text-white text-center py-2 !rounded-button whitespace-nowrap">Visit Store</a>
+</div>
+</div>
+<!-- Physical Visit -->
+<div class="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-2">
+<div class="w-16 h-16 flex items-center justify-center bg-green-700 bg-opacity-10 rounded-full mb-6 mx-auto">
+<i class="ri-hospital-line ri-xl text-green-700"></i>
+</div>
+<h3 class="text-xl font-semibold text-center mb-4">Physical Visit</h3>
+<p class="text-gray-600 mb-6 text-center">Visit our hospital for in-person consultations and treatments</p>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-3 mt-1">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium">Address</h4>
+<p class="text-gray-600">123 Kandy Road, Kurunegala, Sri Lanka</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-3 mt-1">
+<i class="ri-time-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium">Working Hours</h4>
+<p class="text-gray-600">Mon-Sat: 8:00 AM - 6:00 PM<br>Sunday: 9:00 AM - 1:00 PM</p>
+</div>
+</div>
+<a href="https://maps.google.com" target="_blank" class="block w-full bg-green-700 text-white text-center py-2 !rounded-button whitespace-nowrap">Get Directions</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-16">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20female%20Ayurvedic%20doctor%20in%20traditional%20Sri%20Lankan%20attire%20with%20a%20warm%2C%20welcoming%20smile.%20She%20is%20standing%20in%20a%20modern%20yet%20traditional%20Ayurvedic%20clinic%20with%20wooden%20elements%20and%20medicinal%20herbs%20visible%20in%20the%20background.%20The%20lighting%20is%20soft%20and%20natural%2C%20creating%20a%20healing%20atmosphere.&width=600&height=800&seq=2&orientation=portrait" alt="Dr. Nayani Rasnayaka" class="rounded-lg shadow-lg w-full object-cover object-top">
+</div>
+<div class="lg:w-1/2">
+<div class="flex items-center mb-4">
+<h2 class="text-3xl font-bold">About Rasnayaka Ayurveda</h2>
+<div class="ml-4 flex items-center space-x-2">
+<span class="text-sm">EN</span>
+<input type="checkbox" id="about-language-toggle" class="toggle">
+<label for="about-language-toggle" class="toggle-label"></label>
+<span class="text-sm">සිං</span>
+</div>
+</div>
+<div id="about-english" class="space-y-4">
+<p class="text-gray-700">Founded in 1995 by Dr. Nayani Rasnayaka, our hospital combines centuries-old Ayurvedic traditions with modern medical practices to provide holistic healing experiences.</p>
+<p class="text-gray-700">With over 25 years of experience, we have successfully treated thousands of patients suffering from various chronic conditions using our unique blend of herbal remedies, therapeutic treatments, and lifestyle guidance.</p>
+<p class="text-gray-700">Our team of qualified Ayurvedic physicians and therapists are dedicated to understanding your unique constitution (dosha) and creating personalized treatment plans that address the root cause of your health concerns.</p>
+<div class="pt-4">
+<h3 class="text-xl font-semibold mb-3">Dr. Nayani Rasnayaka</h3>
+<p class="text-gray-700 mb-4">BAMS, MD (Ayurveda), PhD in Medicinal Plants<br>Founder & Chief Physician</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Learn more about our team
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div id="about-sinhala" class="hidden space-y-4">
+<p class="text-gray-700">1995 දී ආරම්භ කරන ලද අපගේ රෝහල, සම්පූර්ණ සුවය ලබා දීම සඳහා සියවස් ගණනාවක ආයුර්වේද සම්ප්‍රදායන් නවීන වෛද්‍ය ක්‍රමවේදයන් සමඟ සංයෝජනය කරයි.</p>
+<p class="text-gray-700">වසර 25 කට වැඩි අත්දැකීම් සමඟ, අපගේ අද්විතීය ඖෂධීය ප්‍රතිකාර, චිකිත්සක ප්‍රතිකාර සහ ජීවන රටා මාර්ගෝපදේශ භාවිතයෙන් විවිධ නිදන්ගත තත්ත්වයන්ගෙන් පෙළෙන රෝගීන් දහස් ගණනකට සාර්ථකව ප්‍රතිකාර කර ඇත.</p>
+<p class="text-gray-700">අපගේ සුදුසුකම්ලත් ආයුර්වේද වෛද්‍යවරුන් සහ චිකිත්සකයින් කණ්ඩායම ඔබේ අනන්‍ය ව්‍යුහය (දෝෂ) තේරුම් ගැනීමට සහ ඔබේ සෞඛ්‍ය ගැටලුවල මූල හේතුව විසඳීමට පුද්ගලිකරණය කරන ලද ප්‍රතිකාර සැලසුම් නිර්මාණය කිරීමට කැපවී සිටී.</p>
+<div class="pt-4">
+<h3 class="text-xl font-semibold mb-3">වෛද්ය නයනි රස්නායක</h3>
+<p class="text-gray-700 mb-4">BAMS, MD (ආයුර්වේද), ඖෂධීය පැළෑටි පිළිබඳ ආචාර්ය උපාධිය<br>නිර්මාතෘ සහ ප්‍රධාන වෛද්‍ය</p>
+<a href="#" class="text-primary font-medium flex items-center">
+අපගේ කණ්ඩායම ගැන තව දැනගන්න
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-4">Our Treatments</h2>
+<p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">We offer a comprehensive range of authentic Ayurvedic treatments tailored to your individual constitution and health concerns</p>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Panchakarma -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Authentic%20Panchakarma%20treatment%20scene%20in%20a%20traditional%20Ayurvedic%20spa%20setting.%20A%20patient%20receiving%20oil%20massage%20therapy%20on%20a%20wooden%20treatment%20table.%20The%20room%20features%20natural%20materials%2C%20soft%20lighting%2C%20and%20traditional%20Sri%20Lankan%20Ayurvedic%20elements.%20Medicinal%20oils%20and%20herbs%20visible%20nearby.&width=600&height=400&seq=3&orientation=landscape" alt="Panchakarma Treatment" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+<i class="ri-health-book-line text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Panchakarma</h3>
+<p class="text-gray-600 mb-4">Our signature detoxification and rejuvenation therapy that includes five therapeutic treatments to eliminate toxins and restore balance to your body.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-primary">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Abhyanga (Oil Massage)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-primary">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Shirodhara (Oil Pouring)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-primary">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Swedana (Herbal Steam)</span>
+</li>
+</ul>
+<a href="#" class="text-primary font-medium flex items-center">
+Learn more
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- Herbal Medicine -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Traditional%20Ayurvedic%20medicine%20preparation%20in%20a%20Sri%20Lankan%20setting.%20Various%20dried%20herbs%2C%20roots%2C%20and%20medicinal%20plants%20arranged%20on%20wooden%20surfaces.%20A%20practitioner%20carefully%20measuring%20and%20mixing%20ingredients.%20Mortar%20and%20pestle%2C%20glass%20jars%2C%20and%20traditional%20preparation%20tools%20visible.%20Natural%20lighting%20highlighting%20the%20vibrant%20colors%20of%20the%20herbs.&width=600&height=400&seq=4&orientation=landscape" alt="Herbal Medicine" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mb-4">
+<i class="ri-plant-line text-secondary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Herbal Medicine</h3>
+<p class="text-gray-600 mb-4">We prepare authentic Ayurvedic medicines using traditional methods and high-quality herbs sourced from our own organic gardens.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-secondary">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Customized Herbal Formulations</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-secondary">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Medicinal Oils and Ghee</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-secondary">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Herbal Decoctions and Powders</span>
+</li>
+</ul>
+<a href="#" class="text-secondary font-medium flex items-center">
+Learn more
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- Specialized Care -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Ayurvedic%20skin%20and%20joint%20care%20treatment%20in%20a%20serene%20clinic%20setting.%20A%20therapist%20applying%20herbal%20paste%20to%20a%20patients%20skin.%20Natural%20ingredients%20like%20turmeric%2C%20sandalwood%2C%20and%20neem%20visible%20nearby.%20The%20treatment%20room%20features%20wooden%20elements%2C%20plants%2C%20and%20soft%20lighting%20creating%20a%20healing%20atmosphere.&width=600&height=400&seq=5&orientation=landscape" alt="Specialized Care" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="w-12 h-12 flex items-center justify-center bg-green-700 bg-opacity-10 rounded-full mb-4">
+<i class="ri-heart-pulse-line text-green-700"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Specialized Care</h3>
+<p class="text-gray-600 mb-4">Targeted treatments for specific health conditions using a combination of internal medicines and external therapies.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-green-700">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Skin Disorders (Psoriasis, Eczema)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-green-700">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Joint and Spine Conditions</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-green-700">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Digestive and Metabolic Disorders</span>
+</li>
+</ul>
+<a href="#" class="text-green-700 font-medium flex items-center">
+Learn more
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#" class="inline-block bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap">View All Treatments</a>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-16">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-4">Patient Testimonials</h2>
+<p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">Hear from our patients who have experienced the healing power of Ayurveda at Rasnayaka Ayurveda Hospital</p>
+<div class="testimonial-container relative">
+<div class="testimonial-track flex px-4">
+<!-- Testimonial 1 -->
+<div class="testimonial-card p-4">
+<div class="bg-white rounded-lg shadow-md p-6 h-full">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20Sri%20Lankan%20man%20with%20a%20friendly%20smile%2C%20wearing%20casual%20business%20attire.%20Clean%20background%20with%20soft%20lighting%20highlighting%20his%20face.%20Natural%2C%20authentic%20expression%20conveying%20trust%20and%20approachability.&width=100&height=100&seq=6&orientation=squarish" alt="Dinesh Perera" class="w-12 h-12 rounded-full object-cover object-top mr-4">
+<div>
+<h4 class="font-semibold">Dinesh Perera</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700">"After suffering from chronic back pain for over 5 years and trying numerous treatments, I found relief through the Panchakarma therapy at Rasnayaka Ayurveda. Dr. Nayani's personalized approach and the skilled therapists made all the difference. I'm now pain-free and have incorporated their lifestyle recommendations into my daily routine."</p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="testimonial-card p-4">
+<div class="bg-white rounded-lg shadow-md p-6 h-full">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20Sri%20Lankan%20woman%20with%20a%20warm%20smile%2C%20wearing%20traditional%20attire.%20Clean%20background%20with%20soft%20lighting%20highlighting%20her%20face.%20Natural%2C%20authentic%20expression%20conveying%20trust%20and%20approachability.&width=100&height=100&seq=7&orientation=squarish" alt="Kumari Fernando" class="w-12 h-12 rounded-full object-cover object-top mr-4">
+<div>
+<h4 class="font-semibold">Kumari Fernando</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700">"I had been struggling with psoriasis for years, trying various treatments with little success. The herbal preparations and specialized treatments at Rasnayaka Ayurveda have significantly improved my skin condition. The staff is knowledgeable and caring, and the peaceful environment itself is therapeutic. I highly recommend their services."</p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="testimonial-card p-4">
+<div class="bg-white rounded-lg shadow-md p-6 h-full">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Sri%20Lankan%20man%20in%20his%2030s%20with%20a%20confident%20smile%2C%20wearing%20casual%20modern%20attire.%20Clean%20background%20with%20soft%20lighting%20highlighting%20his%20face.%20Natural%2C%20authentic%20expression%20conveying%20trust%20and%20approachability.&width=100&height=100&seq=8&orientation=squarish" alt="Rajith Mendis" class="w-12 h-12 rounded-full object-cover object-top mr-4">
+<div>
+<h4 class="font-semibold">Rajith Mendis</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700">"As someone who was skeptical about traditional medicine, I was amazed by the results of my treatment for digestive issues at Rasnayaka Ayurveda. The combination of herbal medicines and dietary advice has completely transformed my health. What impressed me most was how they explained the science behind each treatment and ingredient."</p>
+</div>
+</div>
+<!-- Testimonial 4 -->
+<div class="testimonial-card p-4">
+<div class="bg-white rounded-lg shadow-md p-6 h-full">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20an%20elderly%20Sri%20Lankan%20woman%20with%20a%20gentle%20smile%2C%20wearing%20traditional%20attire%20with%20a%20colorful%20saree.%20Clean%20background%20with%20soft%20lighting%20highlighting%20her%20face.%20Natural%2C%20authentic%20expression%20conveying%20wisdom%20and%20warmth.&width=100&height=100&seq=9&orientation=squarish" alt="Malini Jayawardena" class="w-12 h-12 rounded-full object-cover object-top mr-4">
+<div>
+<h4 class="font-semibold">Malini Jayawardena</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-700">"At 68, I had accepted that joint pain was just part of aging until my daughter took me to Rasnayaka Ayurveda. Their joint care treatment and herbal oils have given me mobility and comfort I hadn't experienced in years. The doctors and staff treat you like family, and their follow-up care is exceptional."</p>
+</div>
+</div>
+</div>
+<!-- Navigation Arrows -->
+<button class="absolute top-1/2 left-2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md z-10 testimonial-prev">
+<i class="ri-arrow-left-s-line"></i>
+</button>
+<button class="absolute top-1/2 right-2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md z-10 testimonial-next">
+<i class="ri-arrow-right-s-line"></i>
+</button>
+<!-- Dots -->
+<div class="flex justify-center mt-8 testimonial-dots">
+<button class="w-3 h-3 rounded-full bg-primary mx-1 dot active" data-index="0"></button>
+<button class="w-3 h-3 rounded-full bg-gray-300 mx-1 dot" data-index="1"></button>
+<button class="w-3 h-3 rounded-full bg-gray-300 mx-1 dot" data-index="2"></button>
+<button class="w-3 h-3 rounded-full bg-gray-300 mx-1 dot" data-index="3"></button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-16 bg-primary bg-opacity-10">
+<div class="container mx-auto px-4 text-center">
+<h2 class="text-3xl font-bold mb-6">Begin Your Healing Journey Today</h2>
+<p class="text-gray-700 max-w-2xl mx-auto mb-8">Experience the transformative power of authentic Ayurveda at Rasnayaka Ayurveda Hospital. Our holistic approach addresses the root cause of your health concerns, not just the symptoms.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<a href="#appointment" class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap">Book an Appointment</a>
+<a href="tel:+94771234567" class="bg-white text-primary border border-primary px-6 py-3 !rounded-button font-medium flex items-center whitespace-nowrap">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-phone-line"></i>
+</div>
+Call Us Now
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- About -->
+<div>
+<div class="text-white font-['Pacifico'] text-2xl mb-4">Rasnayaka Ayurveda</div>
+<p class="text-gray-400 mb-6">Combining ancient Ayurvedic wisdom with modern healthcare practices to provide holistic healing for mind, body, and spirit.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-youtube-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-whatsapp-line"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition">Treatments</a></li>
+<li><a href="https://readdy.ai/home/005b0c93-319d-4528-88bf-e4f4393bb24c/1ad1bbc6-4013-49ee-8cde-c7558aab0115" data-readdy="true" class="text-gray-400 hover:text-white transition">Herbal Medicine</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Blog & Resources</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Contact Information</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-400">123 Kandy Road, Kurunegala,<br>Sri Lanka</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-400">+94 77 123 4567<br>+94 37 222 3456</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-400">info@rasnayakaayurveda.com</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-time-line"></i>
+</div>
+<span class="text-gray-400">Mon-Sat: 8:00 AM - 6:00 PM<br>Sunday: 9:00 AM - 1:00 PM</span>
+</li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Subscribe to Our Newsletter</h3>
+<p class="text-gray-400 mb-4">Stay updated with our latest treatments, health tips, and special offers.</p>
+<form class="space-y-3">
+<div>
+<input type="email" placeholder="Your Email Address" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-primary text-white">
+</div>
+<button type="submit" class="w-full bg-primary text-white py-2 !rounded-button whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Rasnayaka Ayurveda Hospital. All rights reserved.</p>
+<div class="flex items-center space-x-4">
+<a href="#" class="text-gray-400 text-sm hover:text-white transition">Privacy Policy</a>
+<a href="#" class="text-gray-400 text-sm hover:text-white transition">Terms of Service</a>
+<div class="flex items-center space-x-2 ml-4">
+<span class="text-sm text-gray-400">EN</span>
+<input type="checkbox" id="footer-language-toggle" class="toggle">
+<label for="footer-language-toggle" class="toggle-label"></label>
+<span class="text-sm text-gray-400">සිං</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Chat Button -->
+<a href="https://wa.me/94771234567" class="fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center bg-green-500 rounded-full shadow-lg z-50 hover:bg-green-600 transition">
+<i class="ri-whatsapp-line text-white text-2xl"></i>
+</a>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Sticky Header
+const header = document.querySelector('.header');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+header.classList.add('scrolled');
+} else {
+header.classList.remove('scrolled');
+}
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+const translations = {
+nav: {
+en: ['Home', 'About', 'Treatments', 'Medicine', 'Contact'],
+si: ['මුල් පිටුව', 'අප ගැන', 'ප්‍රතිකාර', 'ඖෂධ', 'සම්බන්ධ වන්න']
+},
+hero: {
+en: {
+title: 'Healing Through Tradition & Modern Ayurveda',
+subtitle: "Experience the perfect balance of ancient wisdom and contemporary practices at Kurunegala's premier Ayurvedic hospital.",
+cta: ['Book Online', 'Explore Treatments']
+},
+si: {
+title: 'සාම්ප්‍රදායික සහ නවීන ආයුර්වේදය තුළින් සුවය',
+subtitle: 'කුරුණෑගල ප්‍රමුඛතම ආයුර්වේද රෝහලේ පැරණි ප්‍රඥාව සහ නවීන භාවිතයන්හි පරිපූර්ණ සමබරතාවය අත්විඳින්න.',
+cta: ['වෙන් කරවා ගන්න', 'ප්‍රතිකාර ගවේෂණය කරන්න']
+}
+},
+services: {
+en: {
+title: 'Our Treatments',
+subtitle: 'We offer a comprehensive range of authentic Ayurvedic treatments tailored to your individual constitution and health concerns'
+},
+si: {
+title: 'අපගේ ප්‍රතිකාර',
+subtitle: 'ඔබගේ පුද්ගලික ව්‍යුහය සහ සෞඛ්‍ය ගැටලු සඳහා ගැලපෙන සම්පූර්ණ සාම්ප්‍රදායික ආයුර්වේද ප්‍රතිකාර පරාසයක් අප ලබා දෙමු'
+}
+},
+testimonials: {
+en: {
+title: 'Patient Testimonials',
+subtitle: 'Hear from our patients who have experienced the healing power of Ayurveda at Rasnayaka Ayurveda Hospital'
+},
+si: {
+title: 'රෝගී අත්දැකීම්',
+subtitle: 'රස්නායක ආයුර්වේද රෝහලේ ආයුර්වේදයේ සුව කිරීමේ බලය අත්විඳි අපගේ රෝගීන්ගේ අත්දැකීම් අසන්න'
+}
+},
+footer: {
+en: {
+about: 'Combining ancient Ayurvedic wisdom with modern healthcare practices to provide holistic healing for mind, body, and spirit.',
+quickLinks: ['Home', 'About Us', 'Treatments', 'Herbal Medicine', 'Blog & Resources', 'Contact Us'],
+newsletter: {
+title: 'Subscribe to Our Newsletter',
+subtitle: 'Stay updated with our latest treatments, health tips, and special offers.',
+button: 'Subscribe'
+}
+},
+si: {
+about: 'මනස, ශරීරය සහ ආත්මය සඳහා සමස්ත සුවය සැපයීමට පැරණි ආයුර්වේද ප්‍රඥාව නවීන සෞඛ්‍ය සේවා භාවිතයන් සමඟ සංයෝජනය කිරීම.',
+quickLinks: ['මුල් පිටුව', 'අප ගැන', 'ප්‍රතිකාර', 'ආයුර්වේද ඖෂධ', 'බ්ලොග් සහ සම්පත්', 'සම්බන්ධ වන්න'],
+newsletter: {
+title: 'අපගේ පුවත් පත්‍රිකාවට දායක වන්න',
+subtitle: 'අපගේ නවතම ප්‍රතිකාර, සෞඛ්‍ය උපදෙස් සහ විශේෂ පිරිනැමීම් පිළිබඳව යාවත්කාලීනව සිටින්න.',
+button: 'දායක වන්න'
+}
+}
+}
+};
+function updateLanguage(isEnglish) {
+const lang = isEnglish ? 'en' : 'si';
+// Update navigation
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach((link, index) => {
+if (translations.nav[lang][index]) {
+link.textContent = translations.nav[lang][index];
+}
+});
+// Update hero section
+const heroTitle = document.querySelector('h1');
+const heroSubtitle = document.querySelector('h1 + p');
+const heroCTA = document.querySelectorAll('.hero-bg .flex.flex-wrap a');
+if (heroTitle) heroTitle.textContent = translations.hero[lang].title;
+if (heroSubtitle) heroSubtitle.textContent = translations.hero[lang].subtitle;
+heroCTA.forEach((cta, index) => {
+if (translations.hero[lang].cta[index]) {
+cta.textContent = translations.hero[lang].cta[index];
+}
+});
+// Update services section
+const servicesTitle = document.querySelector('#services h2');
+const servicesSubtitle = document.querySelector('#services h2 + p');
+if (servicesTitle) servicesTitle.textContent = translations.services[lang].title;
+if (servicesSubtitle) servicesSubtitle.textContent = translations.services[lang].subtitle;
+// Update testimonials section
+const testimonialsTitle = document.querySelector('section:not(#services) h2');
+const testimonialsSubtitle = document.querySelector('section:not(#services) h2 + p');
+if (testimonialsTitle) testimonialsTitle.textContent = translations.testimonials[lang].title;
+if (testimonialsSubtitle) testimonialsSubtitle.textContent = translations.testimonials[lang].subtitle;
+// Update about section
+const aboutEnglish = document.getElementById('about-english');
+const aboutSinhala = document.getElementById('about-sinhala');
+if (isEnglish) {
+aboutEnglish.classList.remove('hidden');
+aboutSinhala.classList.add('hidden');
+} else {
+aboutEnglish.classList.add('hidden');
+aboutSinhala.classList.remove('hidden');
+}
+// Update footer
+const footerAbout = document.querySelector('footer p');
+const quickLinks = document.querySelectorAll('footer ul:first-of-type a');
+const newsletterTitle = document.querySelector('footer h3:last-of-type');
+const newsletterSubtitle = document.querySelector('footer h3:last-of-type + p');
+const subscribeButton = document.querySelector('footer button');
+if (footerAbout) footerAbout.textContent = translations.footer[lang].about;
+quickLinks.forEach((link, index) => {
+if (translations.footer[lang].quickLinks[index]) {
+link.textContent = translations.footer[lang].quickLinks[index];
+}
+});
+if (newsletterTitle) newsletterTitle.textContent = translations.footer[lang].newsletter.title;
+if (newsletterSubtitle) newsletterSubtitle.textContent = translations.footer[lang].newsletter.subtitle;
+if (subscribeButton) subscribeButton.textContent = translations.footer[lang].newsletter.button;
+}
+// Handle all language toggles
+const languageToggles = document.querySelectorAll('[id$="language-toggle"]');
+languageToggles.forEach(toggle => {
+toggle.addEventListener('change', function() {
+const isEnglish = !this.checked;
+updateLanguage(isEnglish);
+// Sync all toggles
+languageToggles.forEach(otherToggle => {
+otherToggle.checked = this.checked;
+});
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Testimonial Carousel
+const track = document.querySelector('.testimonial-track');
+const dots = document.querySelectorAll('.testimonial-dots .dot');
+const prevBtn = document.querySelector('.testimonial-prev');
+const nextBtn = document.querySelector('.testimonial-next');
+const cards = document.querySelectorAll('.testimonial-card');
+let currentIndex = 0;
+let cardWidth = cards[0].offsetWidth;
+let cardsPerView = 1;
+// Determine cards per view based on screen width
+function updateCardsPerView() {
+if (window.innerWidth >= 1024) {
+cardsPerView = 3;
+} else if (window.innerWidth >= 768) {
+cardsPerView = 2;
+} else {
+cardsPerView = 1;
+}
+updateCarousel();
+}
+function updateCarousel() {
+cardWidth = cards[0].offsetWidth;
+track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+// Update dots
+dots.forEach((dot, index) => {
+if (index === currentIndex) {
+dot.classList.add('bg-primary');
+dot.classList.remove('bg-gray-300');
+} else {
+dot.classList.remove('bg-primary');
+dot.classList.add('bg-gray-300');
+}
+});
+}
+// Initialize
+updateCardsPerView();
+// Event listeners
+window.addEventListener('resize', updateCardsPerView);
+prevBtn.addEventListener('click', () => {
+currentIndex = Math.max(currentIndex - 1, 0);
+updateCarousel();
+});
+nextBtn.addEventListener('click', () => {
+currentIndex = Math.min(currentIndex + 1, cards.length - cardsPerView);
+updateCarousel();
+});
+dots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+currentIndex = index;
+updateCarousel();
+});
+});
+// Auto scroll
+let autoScrollInterval = setInterval(() => {
+currentIndex = (currentIndex + 1) % (cards.length - cardsPerView + 1);
+updateCarousel();
+}, 5000);
+// Pause on hover
+track.addEventListener('mouseenter', () => {
+clearInterval(autoScrollInterval);
+});
+track.addEventListener('mouseleave', () => {
+autoScrollInterval = setInterval(() => {
+currentIndex = (currentIndex + 1) % (cards.length - cardsPerView + 1);
+updateCarousel();
+}, 5000);
+});
+});
+</script>
+</body>
+</html>
